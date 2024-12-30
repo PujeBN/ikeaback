@@ -2,13 +2,6 @@ const mysql = require("mysql");
 const fs=require('fs');
 const axios=require('axios');
 
-// const Url='http://localhost:8001';
-// const db = mysql.createConnection({
-//   host: 'localhost',
-//   database: 'ikea',
-//   user: 'root',
-//   password: ''
-// });
 
 const Url='http://api.ikealab.mn';
 const { db } = require("../db");

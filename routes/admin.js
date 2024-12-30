@@ -27,6 +27,7 @@ router.post('/show-order', auth, catchErrors(adminController.showOrder));
 router.post('/change-order-status', auth, catchErrors(adminController.changeOrderStatus));
 router.post('/order-add-note', auth, catchErrors(adminController.add_note));
 router.post('/order-edit-note', auth, catchErrors(adminController.edit_note));
+router.post('/order-remove-note', auth, catchErrors(adminController.remove_note));
 router.post('/all-product', auth, catchErrors(adminController.allproduct));
 router.post('/delete-product', auth, catchErrors(adminController.deleteProduct));
 router.post('/product-spec', auth, catchErrors(adminController.specs));

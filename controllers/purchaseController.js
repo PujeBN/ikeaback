@@ -1,13 +1,6 @@
 const mysql = require("mysql");
 const axios = require('axios');
 
-// const db = mysql.createConnection({
-//   host: 'localhost',
-//   database: 'ikea',
-//   user: 'root',
-//   password: ''
-// });
-
 const { db } = require("../db");
 
 

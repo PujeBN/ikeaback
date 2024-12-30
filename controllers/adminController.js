@@ -8,24 +8,6 @@ const { Canvas, Image } = require("canvas");
 
 const { db } = require("../db");
 
-// const db = mysql.createConnection({
-//     host: 'localhost',
-//     database: 'ikea',
-//     user: 'ikea',
-//     port: 3306,
-//     password: 'diLFCwKRX3WFX7ss'
-//   });
-
-const transporter = nodemailer.createTransport({
-  host: "smtp.mail.mn",
-  port: 465,
-  secure: true,
-  auth: {
-    user: "support@itlab.mn",
-    pass: "Puje@itlab123",
-  },
-});
-
 const sha256 = require("js-sha256");
 const jwt = require("jwt-then");
 
@@ -718,6 +700,21 @@ exports.add_note = async (req,res) => {
       throw err;
     }
     res.json(newNotes);
+  })
+}
+
+exports.remove_note = async (req,res) => {
+  // order-remove-note
+  const {id } = req.body;
+
+  const sql = `
+  DELETE FROM \`order_notes\` WHERE id=${parseInt(id)}
+  `
+  db.query(sql,(err,result) => {
+    if(err) {
+      throw err;
+    }
+    res.json(result);
   })
 }
 

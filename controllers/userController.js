@@ -7,12 +7,6 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const session = require('express-session');
 
 
-// const db = mysql.createConnection({
-//   host: 'localhost',
-//   database: 'ikea',
-//   user: 'root',
-//   password: ''
-// });
 
 const { db } = require("../db");
 

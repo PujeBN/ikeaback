@@ -1,11 +1,20 @@
 const mysql = require("mysql");
 
 const db = mysql.createConnection({
-  host: '202.131.237.186',
-  database: 'orgil_test',
-  user: 'orgil_Test',
-  password: 'HpnSraNaH87GMiNw'
+  host: 'localhost',
+  database: 'ikea',
+  user: 'root',
+  password: ''
 });
+
+
+// const db = mysql.createConnection({
+//   host: 'localhost',
+//   database: 'ikea',
+//   user: 'ikea',
+//   port: 3306,
+//   password: 'diLFCwKRX3WFX7ss'
+// });
 
 
 
